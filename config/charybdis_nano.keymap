@@ -123,6 +123,8 @@
                 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
                 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
             >;
+
+            label = "ARROWS";
         };
 
         gaming {
@@ -134,6 +136,8 @@
                    &kp N9  &kp N0  &kp SPACE  &kp T   &trans     &trans        &trans          &trans
                    &kp L   &kp J   &kp G      &kp M   &trans     &trans        &tog 2          &trans
             >;
+
+            label = "GAMING";
         };
 
         hotkeys {
@@ -157,6 +161,8 @@
                 &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
                 &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
             >;
+
+            label = "FKEYS";
         };
 
         mouse {
@@ -168,6 +174,8 @@
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
             >;
+
+            label = "MOUSE";
         };
 
         scroll {
@@ -179,6 +187,8 @@
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "SCROLL";
         };
     };
 };
