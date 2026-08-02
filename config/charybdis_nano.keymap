@@ -102,7 +102,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        BASE {
+        base {
             label = "BASE";
             bindings = <
 &kp GRAVE  &kp N1    &kp N2                    &kp N3        &kp N4        &kp N5     &kp N6  &kp N7    &kp N8            &kp N9             &kp N0  &kp BSLH
@@ -114,7 +114,7 @@
             >;
         };
 
-        ARROWS {
+        arrows {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
@@ -125,7 +125,7 @@
             >;
         };
 
-        GAMING {
+        gaming {
             bindings = <
 &kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans     &trans        &trans          &trans    &trans    &trans
 &kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
@@ -136,7 +136,7 @@
             >;
         };
 
-        HOTKEYS {
+        hotkeys {
             label = "HOTKEYS";
             bindings = <
 &none        &none  &none         &none  &none  &none  &none  &none       &none       &none           &none  &none
@@ -148,7 +148,7 @@
             >;
         };
 
-        FKEYS {
+        fkeys {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans
@@ -159,7 +159,7 @@
             >;
         };
 
-        MOUSE {
+        mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
@@ -170,7 +170,7 @@
             >;
         };
 
-        SCROLL {
+        scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
