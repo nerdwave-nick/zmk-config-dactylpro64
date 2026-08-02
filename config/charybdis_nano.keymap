@@ -129,12 +129,12 @@
 
         arrows {
             bindings = <
-&kp LS(TILDE)  &kp LS(EXCL)   &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &trans  &trans    &trans    &trans  &trans     &trans
-&kp LS(TAB)    &kp LS(DQT)    &kp LS(LT)     &kp LS(GT)     &kp LS(P)     &kp LS(Y)      &trans  &trans    &trans    &trans  &trans     &trans
-&kp LS(ESC)    &kp LS(A)      &kp LS(O)      &kp LS(E)      &kp LS(U)     &kp LS(I)      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&kp LS(PLUS)   &kp LS(QMARK)  &kp LS(Q)      &kp LS(J)      &kp LS(K)     &kp LS(X)      &trans  &trans    &trans    &trans  &trans     &trans
-                              &kp LS(COLON)  &kp SEMI       &trans        &trans         &trans  &trans    &trans    &trans
-                              &trans         &none          &trans        &trans         &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+                &trans  &none   &trans  &trans  &trans  &trans    &trans    &trans
             >;
 
             label = "ARROWS";
