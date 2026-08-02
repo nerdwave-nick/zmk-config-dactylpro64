@@ -22,46 +22,14 @@
 };
 
 &msc {
-    time-to-max-speed-ms = <0>;
-    trigger-period-ms = <1000>;
+    trigger-period-ms = <10>;
     delay-ms = <0>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
 
 / {
     behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "L_CLK";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mkp LCLK>, <&mkp LCLK>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "M_CLK";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mkp MCLK>, <&mkp MCLK>;
-        };
-
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "R_CLK";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mkp RCLK>, <&mkp RCLK>;
-        };
-
-        bspc_del: bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_DEL";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         shft_caps: shft_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "SHFT_CAPS";
@@ -141,6 +109,22 @@
             #binding-cells = <0>;
             bindings = <&tog 2 &tog 5>;
             label = "GAMING";
+        };
+
+        scroll_up_one: scroll_up_one {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 15>, <&msc MOVE_Y(20)>;
+
+            label = "SCROLL_UP_ONE";
+        };
+
+        scroll_down_one: scroll_down_one {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 15>, <&msc MOVE_Y(-20)>;
+
+            label = "SCROLL_DOWN_ONE";
         };
     };
 
