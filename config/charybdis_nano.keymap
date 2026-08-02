@@ -121,6 +121,17 @@
 
             label = "SCROLL_DOWN_ONE";
         };
+
+        mdbl: mdbl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 30>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+
+            label = "MDBL";
+        };
     };
 
     keymap {
@@ -191,12 +202,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1  &mkp MB2        &mkp MB4          &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &scroll_up_one  &scroll_down_one  &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
-                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2        &mkp MB4          &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_up_one  &scroll_down_one  &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
             >;
 
             label = "MOUSE";
@@ -205,12 +216,12 @@
         automouse {
             label = "AUTOMOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1  &mkp MB2        &mkp MB4          &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &scroll_up_one  &scroll_down_one  &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
-                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2        &mkp MB4          &mkp MB5  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_up_one  &scroll_down_one  &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
             >;
         };
 
