@@ -239,7 +239,7 @@
 };
 
 &scroll_runtime_input_processor {
-    active-layers = <BIT(128)>;
+    active-layers = <BIT(7)>;
     x-codes = <INPUT_REL_X>;
     y-codes = <INPUT_REL_Y>;
     xy-to-scroll-enabled;
