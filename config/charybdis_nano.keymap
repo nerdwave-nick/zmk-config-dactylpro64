@@ -71,7 +71,7 @@
 
         combo_hotkeys {
             bindings = <&mo 3>;
-            key-positions = <62 63>;
+            key-positions = <54 55>;
         };
     };
 
@@ -142,12 +142,12 @@
 
         gaming {
             bindings = <
-&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans     &trans        &trans          &trans    &trans    &trans
-&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
-&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MCLK  &mkp LCLK     &mkp RCLK       &mkp MB4  &mkp MB5  &mo 6
-&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans     &trans        &mo 6           &trans    &trans    &trans
-                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans     &trans        &trans          &trans
-                   &kp L   &kp J   &kp G      &kp M   &trans     &trans        &tog 2          &trans
+&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans  &trans  &trans  &trans  &trans  &trans
+&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans  &trans  &trans  &trans  &trans  &trans
+&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &trans  &trans  &trans  &trans  &trans  &trans
+&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans  &trans  &trans  &trans  &trans  &trans
+                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans  &trans  &trans  &trans
+                   &kp L   &kp J   &kp G      &kp M   &trans  &trans  &tog 2  &trans
             >;
 
             label = "GAMING";
@@ -183,12 +183,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1      &mkp MB2        &mkp MB4  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &mo 6     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &mo 7     &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
             >;
 
             label = "MOUSE";
+        };
+
+        automouse {
+            label = "AUTOMOUSE";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
 
         scroll {
@@ -202,6 +214,20 @@
             >;
 
             label = "SCROLL";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        mouse_automouse {
+            if-layers = <6>;
+            then-layer = <5>;
+        };
+
+        mouse_gaming {
+            if-layers = <2>;
+            then-layer = <5>;
         };
     };
 };
