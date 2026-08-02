@@ -140,12 +140,12 @@
 
         arrows {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
-                &trans  &none   &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(D)  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LG(M)  &trans    &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans
+                &trans  &none   &trans  &trans  &trans     &trans     &trans    &trans
             >;
 
             label = "ARROWS";
