@@ -21,6 +21,12 @@
     quick-tap-ms = <170>;
 };
 
+&msc {
+    time-to-max-speed-ms = <0>;
+    trigger-period-ms = <1000>;
+    delay-ms = <0>;
+};
+
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -75,6 +81,13 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
+        };
+
+        mo_to_mouse: mo_to_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MO_TO_MOUSE";
+            #binding-cells = <0>;
+            bindings = <&mo 5>, <&tog 5>;
         };
     };
 
@@ -137,12 +150,12 @@
         base {
             label = "BASE";
             bindings = <
-&kp GRAVE  &kp N1    &kp N2         &kp N3     &kp N4        &kp N5      &kp N6  &kp N7             &kp N8            &kp N9               &kp N0  &kp BSLH
-&kp TAB    &kp SQT   &kp COMMA      &kp DOT    &kp P         &kp Y       &kp F   &kp G              &kp C             &kp R                &kp L   &kp DELETE
-&kp ESC    &kp A     &kp O          &kp E      &kp U         &kp I       &kp D   &kp H              &kp T             &kp N                &kp S   &kp RET
-&kp EQUAL  &kp FSLH  &kp Q          &kp J      &kp K         &kp X       &kp B   &kp M              &kp W             &kp V                &kp Z   &kp MINUS
-                     &kp SEMICOLON  &kp COLON  &kp SPACE     &shft_caps  &none   &lthr 1 BACKSPACE  &kp LEFT_BRACKET  &kp RBKT
-                     &kp LEFT_ALT   &mo 5      &kp LEFT_GUI  &kp LCTRL   &none   &none              &tog 2            &lt 4 K_APPLICATION
+&kp GRAVE  &kp N1    &kp N2         &kp N3        &kp N4        &kp N5      &kp N6  &kp N7             &kp N8            &kp N9               &kp N0  &kp BSLH
+&kp TAB    &kp SQT   &kp COMMA      &kp DOT       &kp P         &kp Y       &kp F   &kp G              &kp C             &kp R                &kp L   &kp DELETE
+&kp ESC    &kp A     &kp O          &kp E         &kp U         &kp I       &kp D   &kp H              &kp T             &kp N                &kp S   &kp RET
+&kp EQUAL  &kp FSLH  &kp Q          &kp J         &kp K         &kp X       &kp B   &kp M              &kp W             &kp V                &kp Z   &kp MINUS
+                     &kp SEMICOLON  &kp COLON     &kp SPACE     &shft_caps  &none   &lthr 1 BACKSPACE  &kp LEFT_BRACKET  &kp RBKT
+                     &kp LEFT_ALT   &mo_to_mouse  &kp LEFT_GUI  &kp LCTRL   &none   &none              &tog 2            &lt 4 K_APPLICATION
             >;
         };
 
