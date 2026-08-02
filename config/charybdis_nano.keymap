@@ -121,6 +121,13 @@
             bindings = <&out OUT_BLE &bt BT_SEL 4>;
             label = "BT_4";
         };
+
+        gaming: gaming {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 2 &tog 5>;
+            label = "GAMING";
+        };
     };
 
     keymap {
@@ -134,7 +141,7 @@
 &kp ESC    &kp A     &kp O          &kp E      &kp U         &kp I       &kp D   &kp H              &kp T             &kp N                &kp S   &kp RET
 &kp EQUAL  &kp FSLH  &kp Q          &kp J      &kp K         &kp X       &kp B   &kp M              &kp W             &kp V                &kp Z   &kp MINUS
                      &kp SEMICOLON  &kp COLON  &kp SPACE     &shft_caps  &none   &lthr 1 BACKSPACE  &kp LEFT_BRACKET  &kp RBKT
-                     &kp LEFT_ALT   &tog 5     &kp LEFT_GUI  &kp LCTRL   &none   &none              &tog 2            &lt 4 K_APPLICATION
+                     &kp LEFT_ALT   &tog 5     &kp LEFT_GUI  &kp LCTRL   &none   &none              &gaming           &lt 4 K_APPLICATION
             >;
         };
 
@@ -153,12 +160,12 @@
 
         gaming {
             bindings = <
-&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans  &trans  &trans  &trans  &trans  &trans
-&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans  &trans  &trans  &trans  &trans  &trans
-&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &trans  &trans  &trans  &trans  &trans  &trans
-&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans  &trans  &trans  &trans  &trans  &trans
-                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans  &trans  &trans  &trans
-                   &kp L   &kp J   &kp G      &kp M   &trans  &trans  &tog 2  &trans
+&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans  &trans  &trans   &trans  &trans  &trans
+&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans  &trans  &trans   &trans  &trans  &trans
+&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &trans  &trans  &trans   &trans  &trans  &trans
+&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans  &trans  &trans   &trans  &trans  &trans
+                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans  &trans  &trans   &trans
+                   &kp L   &kp J   &kp G      &kp M   &trans  &trans  &gaming  &trans
             >;
 
             label = "GAMING";
@@ -178,12 +185,12 @@
 
         fkeys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
-                &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
             >;
 
             label = "FKEYS";
@@ -194,24 +201,12 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1      &mkp MB2        &mkp MB4  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &mo 7     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &mo 6     &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
             >;
 
             label = "MOUSE";
-        };
-
-        automouse {
-            label = "AUTOMOUSE";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
 
         scroll {
@@ -228,19 +223,7 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        mouse_automouse {
-            if-layers = <6>;
-            then-layer = <5>;
-        };
-
-        mouse_gaming {
-            if-layers = <2>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
 
 &mouse_runtime_input_processor {
