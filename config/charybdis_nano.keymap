@@ -191,12 +191,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll_up_one    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1          &mkp MB2  &mkp MB4  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll_down_one  &trans    &trans    &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans            &trans    &trans
-                &trans  &trans  &trans  &trans  &trans    &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans            &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1  &mkp MB2        &mkp MB4          &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &scroll_up_one  &scroll_down_one  &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
             >;
 
             label = "MOUSE";
