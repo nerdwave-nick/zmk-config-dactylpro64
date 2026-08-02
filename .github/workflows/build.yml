@@ -3,7 +3,7 @@ name: Build ZMK firmware
 on:
   push:
     branches:
-      - trackball-dyastudio
+      - dya-dvorak-custom
   pull_request:
   workflow_dispatch:
     inputs:
@@ -57,6 +57,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     name: Release
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
