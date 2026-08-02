@@ -125,7 +125,7 @@
         gaming: gaming {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &tog 5>;
+            bindings = <&tog 2 &tog 5>;
             label = "GAMING";
         };
     };
