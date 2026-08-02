@@ -55,6 +55,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        shft_caps: shft_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <120>;
+        };
     };
 
     combos {
@@ -109,12 +118,12 @@
         base {
             label = "BASE";
             bindings = <
-&kp GRAVE  &kp N1    &kp N2         &kp N3     &kp N4        &kp N5     &kp N6  &kp N7               &kp N8            &kp N9    &kp N0  &kp BSLH
-&kp TAB    &kp SQT   &kp COMMA      &kp DOT    &kp P         &kp Y      &kp F   &kp G                &kp C             &kp R     &kp L   &bspc_del
-&kp ESC    &kp A     &kp O          &kp E      &kp U         &kp I      &kp D   &kp H                &kp T             &kp N     &kp S   &kp RET
-&kp EQUAL  &kp FSLH  &kp Q          &kp J      &kp K         &kp X      &kp B   &kp M                &kp W             &kp V     &kp Z   &kp MINUS
-                     &kp SEMICOLON  &kp COLON  &kp SPACE     &kp LSHFT  &none   &lt 1 K_APPLICATION  &kp LEFT_BRACKET  &kp RBKT
-                     &kp LEFT_ALT   &tog 5     &kp LEFT_GUI  &kp LCTRL  &none   &none                &tog 2            &mo 4
+&kp GRAVE  &kp N1    &kp N2         &kp N3     &kp N4        &kp N5      &kp N6  &kp N7               &kp N8            &kp N9    &kp N0  &kp BSLH
+&kp TAB    &kp SQT   &kp COMMA      &kp DOT    &kp P         &kp Y       &kp F   &kp G                &kp C             &kp R     &kp L   &bspc_del
+&kp ESC    &kp A     &kp O          &kp E      &kp U         &kp I       &kp D   &kp H                &kp T             &kp N     &kp S   &kp RET
+&kp EQUAL  &kp FSLH  &kp Q          &kp J      &kp K         &kp X       &kp B   &kp M                &kp W             &kp V     &kp Z   &kp MINUS
+                     &kp SEMICOLON  &kp COLON  &kp SPACE     &shft_caps  &none   &lt 1 K_APPLICATION  &kp LEFT_BRACKET  &kp RBKT
+                     &kp LEFT_ALT   &tog 5     &kp LEFT_GUI  &kp LCTRL   &none   &none                &tog 2            &mo 4
             >;
         };
 
