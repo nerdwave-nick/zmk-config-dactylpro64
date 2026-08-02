@@ -125,7 +125,7 @@
         gaming: gaming {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &tog 6>;
+            bindings = <&tog 2 &tog 5>;
             label = "GAMING";
         };
     };
@@ -141,7 +141,7 @@
 &kp ESC    &kp A     &kp O          &kp E      &kp U         &kp I       &kp D   &kp H              &kp T             &kp N                &kp S   &kp RET
 &kp EQUAL  &kp FSLH  &kp Q          &kp J      &kp K         &kp X       &kp B   &kp M              &kp W             &kp V                &kp Z   &kp MINUS
                      &kp SEMICOLON  &kp COLON  &kp SPACE     &shft_caps  &none   &lthr 1 BACKSPACE  &kp LEFT_BRACKET  &kp RBKT
-                     &kp LEFT_ALT   &tog 6     &kp LEFT_GUI  &kp LCTRL   &none   &none              &tog 2            &lt 4 K_APPLICATION
+                     &kp LEFT_ALT   &tog 5     &kp LEFT_GUI  &kp LCTRL   &none   &none              &tog 2            &lt 4 K_APPLICATION
             >;
         };
 
@@ -196,18 +196,6 @@
             label = "FKEYS";
         };
 
-        automouse {
-            label = "AUTOMOUSE";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1        &mkp MB2  &mkp MB4  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans    &trans    &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans
-                &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans
-            >;
-        };
-
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans    &trans    &trans
@@ -219,6 +207,18 @@
             >;
 
             label = "MOUSE";
+        };
+
+        automouse {
+            label = "AUTOMOUSE";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1        &mkp MB2  &mkp MB4  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans    &trans    &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans
+                &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans
+            >;
         };
 
         scroll {
