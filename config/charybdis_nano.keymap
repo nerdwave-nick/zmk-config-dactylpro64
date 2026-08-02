@@ -55,6 +55,11 @@
             bindings = <&mo 3>;
             key-positions = <36 47>;
         };
+
+        combo_hotkeys {
+            bindings = <&mo 4>;
+            key-positions = <55 48>;
+        };
     };
 
     macros {
