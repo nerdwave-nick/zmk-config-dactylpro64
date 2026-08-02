@@ -51,34 +51,9 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <>;
-            bindings = <&mkp LCLK>;
-        };
-
-        combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <>;
-            bindings = <&mkp MCLK>;
-        };
-
-        combo_LSHFT {
-            timeout-ms = <50>;
-            key-positions = <>;
-            bindings = <&mkp RCLK>;
-        };
-
-        combo_2 {
-            timeout-ms = <50>;
-            key-positions = <>;
-            bindings = <&kp N2 >;
-        };
-
-        combo_GUI {
-            timeout-ms = <50>;
-            key-positions = <>;
-            bindings = <&tog 0>;
+        combo_fkeys {
+            bindings = <&mo 3>;
+            key-positions = <36 47>;
         };
     };
 
