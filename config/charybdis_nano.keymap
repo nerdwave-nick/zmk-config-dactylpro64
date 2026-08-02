@@ -78,7 +78,7 @@
         combo_GUI {
             timeout-ms = <50>;
             key-positions = <>;
-            bindings = <&tog 2>;
+            bindings = <&tog 0>;
         };
     };
 
@@ -123,14 +123,25 @@
         compatible = "zmk,keymap";
 
         BASE {
-            label = "DEFAULT";
+            label = "BASE";
             bindings = <
 &kp GRAVE  &kp N1    &kp N2                    &kp N3        &kp N4        &kp N5     &kp N6  &kp N7    &kp N8            &kp N9             &kp N0  &kp BSLH
 &kp TAB    &kp SQT   &kp COMMA                 &kp DOT       &kp P         &kp Y      &kp F   &kp G     &kp C             &kp R              &kp L   &kp DEL
 &kp ESC    &kp A     &kp O                     &kp E         &kp U         &kp I      &kp D   &kp H     &kp T             &kp N              &kp S   &kp RET
 &kp EQUAL  &kp FSLH  &kp Q                     &kp J         &kp K         &kp X      &kp B   &kp M     &kp W             &kp V              &kp Z   &kp MINUS
-                     &kp SEMICOLON             &kp LGUI      &kp SPACE     &kp LSHFT  &none   &kp BSPC  &kp LEFT_BRACKET  &kp RBKT
-                     &kp LS(LA(LEFT_CONTROL))  &kp LEFT_ALT  &kp LEFT_GUI  &kp LCTRL  &none   &none     &tog 1            &kp K_APPLICATION
+                     &kp SEMICOLON             &mo 1         &kp SPACE     &kp LSHFT  &none   &kp BSPC  &kp LEFT_BRACKET  &kp RBKT
+                     &kp LS(LA(LEFT_CONTROL))  &kp LEFT_ALT  &kp LEFT_GUI  &kp LCTRL  &none   &none     &tog 2            &kp K_APPLICATION
+            >;
+        };
+
+        ARROWS {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
             >;
         };
 
@@ -138,27 +149,26 @@
             bindings = <
 &kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &trans     &trans        &trans          &trans    &trans    &trans
 &kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
-&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MCLK  &mkp LCLK     &mkp RCLK       &mkp MB4  &mkp MB5  &mo 5
+&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MCLK  &mkp LCLK     &mkp RCLK       &mkp MB4  &mkp MB5  &mo 6
 &kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans     &trans        &trans          &trans    &trans    &trans
                    &kp N9  &kp N0  &kp SPACE  &kp T   &trans     &trans        &trans          &trans
-                   &kp L   &kp J   &kp G      &kp M   &trans     &trans        &tog 1          &trans
+                   &kp L   &kp J   &kp G      &kp M   &trans     &trans        &tog 2          &trans
             >;
         };
 
-        number_layer {
-            label = "NUMBER";
+        F-KEYS {
             bindings = <
-&trans  &none  &kp F10         &kp F11  &kp F12  &none   &none   &none      &kp FSLH   &kp STAR        &kp MINUS  &none
-&trans  &none  &kp F7          &kp F8   &kp F9   &none   &none   &kp KP_N7  &kp KP_N8  &kp KP_N9       &kp PLUS   &none
-&trans  &none  &kp F4          &kp F5   &kp F6   &none   &none   &kp KP_N4  &kp KP_N5  &kp KP_N6       &kp ENTER  &kp RET
-&trans  &none  &kp F1          &kp F2   &kp F3   &none   &none   &kp KP_N1  &kp KP_N2  &kp KP_N3       &kp ENTER  &kp ENTER
-               &trans          &trans   &trans   &trans  &none   &none      &kp KP_N0  &kp KP_DOT
-               &studio_unlock  &none    &trans   &trans  &kp N1  &kp N1     &kp N1     &studio_unlock
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+                &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
             >;
         };
 
         HOTKEYS {
-            label = "SYMBOL";
+            label = "HOTKEYS";
             bindings = <
 &none        &none  &none         &none  &none  &none  &none  &none       &none       &none           &none  &none
 &none        &none  &none         &none  &none  &none  &none  &none       &none       &none           &none  &none
@@ -173,7 +183,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1      &mkp MB2        &mkp MB4  &mkp MB5  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1      &mkp MB2        &mkp MB4  &mkp MB5  &mo 6
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans    &trans    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
                 &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans
