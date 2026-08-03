@@ -106,18 +106,12 @@
             label = "GAMING";
         };
 
-        scroll_up_one: scroll_up_one {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 15>, <&msc MOVE_Y(100)>;
-
-            label = "SCROLL_UP_ONE";
-        };
-
-        scroll_down_one: scroll_down_one {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 15>, <&msc MOVE_Y(-100)>;
+        scroll_one: scroll_down_one {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap_time 15>,
+                <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
 
             label = "SCROLL_DOWN_ONE";
         };
@@ -164,12 +158,12 @@
 
         gaming {
             bindings = <
-&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5    &kp N6    &kp N7          &kp N8            &kp N9    &kp N0
-&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &kp F5    &trans    &trans          &trans            &trans    &trans
-&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MB3  &mkp MB1  &mkp MB2        &mkp MB4          &mkp MB5  &trans
-&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans    &trans    &scroll_up_one  &scroll_down_one  &mo 7     &trans
-                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans    &trans    &trans          &trans
-                   &kp L   &kp J   &kp G      &kp M   &trans    &trans    &tog 2          &trans
+&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5    &kp N6    &kp N7                  &kp N8                   &kp N9    &kp N0
+&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &kp F5    &trans    &trans                  &trans                   &trans    &trans
+&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MB3  &mkp MB1  &mkp MB2                &mkp MB4                 &mkp MB5  &trans
+&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans    &trans    &scroll_one MOVE_Y(20)  &scroll_one MOVE_Y(-20)  &mo 7     &trans
+                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans    &trans    &trans                  &trans
+                   &kp L   &kp J   &kp G      &kp M   &trans    &trans    &tog 2                  &trans
             >;
 
             label = "GAMING";
@@ -202,12 +196,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2        &mkp MB4          &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_up_one  &scroll_down_one  &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
-                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans                   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans                   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2                &mkp MB4                 &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_one MOVE_Y(20)  &scroll_one MOVE_Y(-20)  &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans
             >;
 
             label = "MOUSE";
@@ -216,12 +210,12 @@
         automouse {
             label = "AUTOMOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans            &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2        &mkp MB4          &mkp MB5  &mo 5
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_up_one  &scroll_down_one  &mo 7     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
-                &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans                   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans                   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2                &mkp MB4                 &mkp MB5  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_one MOVE_Y(20)  &scroll_one MOVE_Y(-20)  &mo 7     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans     &trans                  &trans
             >;
         };
 
