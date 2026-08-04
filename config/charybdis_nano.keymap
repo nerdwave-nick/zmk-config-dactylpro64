@@ -160,12 +160,12 @@
 
         gaming {
             bindings = <
-&kp N5  &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5    &kp N6    &kp N7                    &kp N8                     &kp N9    &kp N0
-&kp N6  &kp TAB    &kp Q   &kp W   &kp E      &kp R   &kp F5    &trans    &trans                    &trans                     &trans    &trans
-&kp N7  &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MB3  &mkp MB1  &mkp MB2                  &mkp MB4                   &mkp MB5  &trans
-&kp N8  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans    &trans    &scroll_one MOVE_Y(1600)  &scroll_one MOVE_Y(-1600)  &mo 7     &trans
-                   &kp N9  &kp N0  &kp SPACE  &kp T   &trans    &trans    &trans                    &trans
-                   &kp L   &kp J   &kp G      &kp M   &trans    &trans    &tog 2                    &trans
+&kp F5    &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5    &kp N6    &kp N7                    &kp N8                     &kp N9    &kp N0
+&kp I     &kp TAB    &kp Q   &kp W   &kp E      &kp R   &trans    &trans    &trans                    &trans                     &trans    &trans
+&kp O     &kp LSHFT  &kp A   &kp S   &kp D      &kp F   &mkp MB3  &mkp MB1  &mkp MB2                  &mkp MB4                   &mkp MB5  &trans
+&kp LALT  &kp LCTRL  &kp Z   &kp X   &kp C      &kp V   &trans    &trans    &scroll_one MOVE_Y(1600)  &scroll_one MOVE_Y(-1600)  &mo 7     &trans
+                     &kp Y   &kp H   &kp SPACE  &kp T   &trans    &trans    &trans                    &trans
+                     &kp L   &kp J   &kp G      &kp M   &trans    &trans    &tog 2                    &trans
             >;
 
             label = "GAMING";
@@ -214,7 +214,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                    &trans                     &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                    &trans                     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2                  &mkp MB4                   &mkp MB5  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1   &mkp MB2                  &mkp MB4                   &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &mdbl MB1  &scroll_one MOVE_Y(1600)  &scroll_one MOVE_Y(-1600)  &mo 7     &trans
                 &trans  &trans  &trans  &trans  &trans    &trans     &trans                    &trans
                 &trans  &trans  &trans  &trans  &trans    &trans     &trans                    &trans
