@@ -29,16 +29,16 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,6)  RC(3,7) RC(3,8) RC(3,9
    kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
-
-
+		wakeup-source;
 		diode-direction = "col2row";
-		       row-gpios= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		                 , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D4
-				, <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // C6
-				, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D7
-				, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D7
-				, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // E6
-				;
+		row-gpios 
+			= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		    , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D4
+			, <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // C6
+			, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D7
+			, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D7
+			, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // E6
+			;
 	};
 
 charybdis_nano: charybdis_nano {
@@ -114,6 +114,4 @@ charybdis_nano: charybdis_nano {
             , <&key_physical_attrs 100 100  925  640   (-3000)   1300  425>
             ;
     };
-
-
 };
